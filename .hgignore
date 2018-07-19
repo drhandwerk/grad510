@@ -1,0 +1,84 @@
+syntax: glob
+*~
+*.orig
+*.o
+*.d
+*.f
+*.C
+*.s
+*.a
+*F_F.H
+*.cpre
+*.hdf5
+*.cgns
+*.visit
+visitlog.py
+*.mpeg
+*.log
+*.ex
+*.cubin
+*.out
+*.dummy
+*.svn
+*.core
+CVS
+.cvsignore
+*.depend
+*.output
+*.hh
+*.dot
+*.db
+
+# Docs
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.ps
+*.eps
+*.pdf
+*.log
+
+# Ignore files starting with # and .#
+syntax: regexp
+^\#[^/]*$
+^\.\#[^/]*$
+^.*?/\#[^/]*$
+^.*?/\.\#[^/]*$
+^\.nfs
+^.*?/\.nfs
+
+# Exclude autoconf
+syntax: regexp
+^autom4te.cache
+^config.status
+^Common/mk/Make.defs$
+^lib/src/BoxFramework/Config.H$
+
+# Ignore o p d f directories
+syntax: regexp
+^.*?/[opdf]/
+
+# Exclude doxygen output
+syntax: regexp
+^doc/html
+^doc/latex
+
+# Exclude documentation
+syntax: regexp
+^doc/.*\.pdf
+
+# Exclude binaries in test
+syntax: regexp
+^.*/test/.*/test[^\.]*$
+
+# Exclude binaries in application
+syntax: regexp
+^application/sandbox/sandbox$
+^application/gpuSandbox/gpuSandbox$
+^application/vlaloops/vlaloops$
+^application/laplacian/laplacian$
+^application/lapack/lapack$
+^application/cgnswrite/cgnswrite$
+^application/latticeBoltzmann/latticeBoltzmann$
+^application/wave/wave$
